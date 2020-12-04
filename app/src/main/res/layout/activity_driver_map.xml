@@ -1,0 +1,148 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DriverMapActivity">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="308dp"
+        android:layout_height="138dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        tools:context=".DriverMapActivity"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="2dp" />
+
+    <TextView
+        android:id="@+id/timerValue"
+        android:layout_width="144dp"
+        android:layout_height="67dp"
+
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="      00:00:00"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/pause"
+        app:layout_constraintEnd_toEndOf="@+id/timerValue2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/timerValue2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/timerValue2"
+        android:layout_width="135dp"
+        android:layout_height="74dp"
+
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="      00:00:00"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/timerValue"
+        app:layout_constraintStart_toStartOf="@+id/totalcost"
+        app:layout_constraintTop_toBottomOf="@+id/totalcost"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="286dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="START"
+        android:textSize="60px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/End"
+        android:layout_width="135dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#ff0000"
+        android:text="END TRIP"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/distanceV"
+        app:layout_constraintHorizontal_bias="0.341"
+        app:layout_constraintStart_toEndOf="@+id/timerValue"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/waiting"
+        android:layout_width="135dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="8dp"
+        android:background="#F9B707"
+        android:text="START WAITING"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/timerValue"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/timerValue"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/pause"
+        android:layout_width="135dp"
+        android:layout_height="52dp"
+        android:background="#F9B707"
+        android:text="STOP WAITING"
+        android:textSize="20sp"
+
+        app:layout_constraintEnd_toEndOf="@+id/timerValue"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/timerValue"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="392dp" />
+
+    <TextView
+        android:id="@+id/distanceV"
+        android:layout_width="192dp"
+        android:layout_height="158dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="      0.0 KM"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/End"
+        app:layout_constraintEnd_toEndOf="@+id/totalcost"
+        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintStart_toEndOf="@+id/timerValue2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/totalcost"
+        android:layout_width="301dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="          TotalCost"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/distanceV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map"
+        app:layout_constraintVertical_bias="0.128" />
+
+</android.support.constraint.ConstraintLayout>
